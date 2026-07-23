@@ -6362,7 +6362,10 @@ int result = f.get();</code></pre>
       <h3>How does ExecutorService work?</h3>
       <div class="answer">
         <h4>30-second answer</h4>
-        <p>ExecutorService manages a pool of worker threads and executes submitted tasks, separating task submission from thread management.</p>
+        <p>ExecutorService is a Java concurrency API used to manage a pool of worker threads and execute tasks asynchronously.
+           Instead of manually creating a new Thread for every task, we submit Runnable or Callable tasks to an ExecutorService. 
+           The executor maintains a thread pool and usually a task queue. When a worker thread becomes available, it takes a task from the queue and executes it.
+           It also provides lifecycle management through shutdown() and shutdownNow(), and supports getting results through Future.</p>
       </div>
       <details class="deep detailed">
         <summary>Deep dive</summary>
